@@ -10,8 +10,7 @@ public class Animal {
     protected int age;
     protected int weight;
     protected String color;
-
-
+    protected String old;
 
     public String getName() {
 
@@ -45,6 +44,15 @@ public class Animal {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public String getOld() {
+        return old;
+    }
+
+    public void setOld(String old) {
+        this.old = old;
+    }
+
     public void say(){
         System.out.println("Я говорю");
     }
@@ -61,27 +69,25 @@ public class Animal {
 
     @Override
     public String toString() {
+        if(age == 1)
+            old = "год";
+        else if (age >= 2 & age <=4)
+            old = "года";
+        else if (age >= 5 & age <= 20)
+            old = "лет";
+        else
+            old = "Вы с какой планеты? Столько не живут!";
         return "Animal{" +
                 "животное'" + name + '\'' +
-                ", возраст=" + age +
+                ", возраст=" + age + old +
                 ", вес=" + weight +
                 ", цвет='" + color + '\'' +
                 '}';
-    }
-    int getAgeLastNumber = 5;
-    int ageLastNumber = age % 10;
-    boolean exclusion = (age % 100 >= 11) && (age % 100 <= 14);
-    String old = "";{
-        if (ageLastNumber == 1)
-            old = "год";
-        else if (ageLastNumber == 0 || ageLastNumber >= 5 && ageLastNumber <= 9)
-            old = "лет";
-        else if (ageLastNumber >= 2 && ageLastNumber <= 4)
-            old = "года";
-    }
+        }
 
             public void whoIam(){
-        System.out.println("Привет! меня зовут " + name + ", мне " +age+ old + ", я вешу - " +weight+ "кг, мой цвет - " +color);
+
+        System.out.println("Привет! меня зовут " + name + ", мне " + age+old + ", я вешу - " +weight+ "кг, мой цвет - " +color);
     }
 }
 

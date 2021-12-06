@@ -83,6 +83,8 @@ public class MainClass {
                         System.out.println("Список ваших животных");
                         for (int i=0; i<animals.size(); i++){
                             animals.get(i).say();
+                            animals.get(i).whoIam();
+
                             System.out.println(animals.get(i));
 
                         }
