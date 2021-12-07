@@ -1,10 +1,5 @@
 package com.otus;
 
-import com.sun.deploy.cache.BaseLocalApplicationProperties;
-import javafx.event.EventDispatchChain;
-
-import java.text.ChoiceFormat;
-
 public class Animal {
     protected String name;
     protected int age;
@@ -77,17 +72,8 @@ public class Animal {
             old = "лет";
         else
             old = "Вы с какой планеты? Столько не живут!";
-        return "Animal{" +
-                "животное'" + name + '\'' +
-                ", возраст=" + age + old +
-                ", вес=" + weight +
-                ", цвет='" + color + '\'' +
-                '}';
-        }
+        return "Привет! меня зовут " + name + ", мне " + age+old + ", я вешу - " +weight+ "кг, мой цвет - " +color;
 
-            public void whoIam(){
-
-        System.out.println("Привет! меня зовут " + name + ", мне " + age+old + ", я вешу - " +weight+ "кг, мой цвет - " +color);
     }
 }
 

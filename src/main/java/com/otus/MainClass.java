@@ -17,7 +17,7 @@ public class MainClass {
             Scanner scanner = new Scanner(System.in);
             int menu = scanner.nextInt();
 
-            while (!(menu == 3)) {
+            while (menu != 3) {
 
                 switch (menu){
                     case 1:
@@ -83,7 +83,6 @@ public class MainClass {
                         System.out.println("Список ваших животных");
                         for (int i=0; i<animals.size(); i++){
                             animals.get(i).say();
-                            animals.get(i).whoIam();
 
                             System.out.println(animals.get(i));
 
